@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "../styles/PizzaCard.module.css";
+import styles from "../styles/KfcCard.module.css";
 
-const PizzaCard = () => {
+const KfcCard = () => {
   return (
     <div className={styles.container}>
       <Image src="/img/pizza.png" alt="" width="500" height="500" />
@@ -14,4 +14,4 @@ const PizzaCard = () => {
   );
 };
 
-export default PizzaCard;
+export default KfcCard;
