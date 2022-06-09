@@ -18,7 +18,7 @@ const Cart = () => {
             <td>
               <div className={styles.imgContainer}>
                 <Image
-                  src="/img/pizza.png"
+                  src="/img/kfc.jpg"
                   layout="fill"
                   objectFit="cover"
                   alt=""
@@ -26,7 +26,7 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <span className={styles.name}>CORALZO</span>
+              <span className={styles.name}>BIG BOX</span>
             </td>
             <td>
               <span className={styles.extras}>
@@ -47,7 +47,7 @@ const Cart = () => {
             <td>
               <div className={styles.imgContainer}>
                 <Image
-                  src="/img/pizza.png"
+                  src="/img/kfc.jpg"
                   layout="fill"
                   objectFit="cover"
                   alt=""
@@ -55,7 +55,7 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <span className={styles.name}>CORALZO</span>
+              <span className={styles.name}>BIG BOX</span>
             </td>
             <td>
               <span className={styles.extras}>
