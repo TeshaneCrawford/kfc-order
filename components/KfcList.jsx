@@ -1,7 +1,7 @@
 import styles from "../styles/KfcList.module.css";
 import KfcCard from "./KfcCard"
 
-const KfcList = () => {
+const KfcList = ({ KfcList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST MEAL IN TOWN</h1>
@@ -11,14 +11,9 @@ const KfcList = () => {
         sit amet, consectetur adipiscing elit.
       </p>
       <div className={styles.wrapper}>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
-          <KfcCard/>
+          {kfcList.map((kfc) => (
+            <KfcCard key={kfc.id} kfc={kfc} />
+          ))}
       </div>
     </div>
   );
