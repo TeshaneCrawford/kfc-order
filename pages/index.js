@@ -8,7 +8,7 @@ import AddButton from "../components/AddButton";
 import Featured from "../components/Featured";
 import KfcList from "../components/KfcList";
 
-export default function Home({ kfcList, admin}) {
+export default function Home({ kfcList }) {
   const [close, setClose] = useState(true);
   return (
     <div className={styles.container}>
@@ -19,7 +19,7 @@ export default function Home({ kfcList, admin}) {
       </Head>
       <Featured />
       {<AddButton setClose={setClose} />}
-      <KfcList pizzaList={kfcList} />
+      <KfcList kfcList={kfcList} />
       {!close && <Add setClose={setClose} />}
 
       
@@ -27,19 +27,12 @@ export default function Home({ kfcList, admin}) {
   )
 }
 
-export const getServerSideProps = async (ctx) => {
-  const myCookie = ctx.req?.cookies || "";
-  let admin = false;
-
-  if (myCookie.token === process.env.TOKEN) {
-    admin = true;
-  }
+export const getServerSideProps = async () => {
 
   const res = await axios.get("http://localhost:3000/api/product");
   return {
     props: {
       KfcList: res.data,
-      admin,
     },
   };
 };
